@@ -8,7 +8,11 @@ class Buyer extends Model
 {
     protected $table = 'buyers';
     protected $primaryKey = 'buyer_id';
-    public $timestamps = false; // We use created_date manually
+    public $timestamps = false;
 
-    protected $fillable = ['buyer_name', 'status', 'created_date'];
+    protected $fillable = [
+        'buyer_name',
+        'status',
+        'created_date'
+    ];
 }

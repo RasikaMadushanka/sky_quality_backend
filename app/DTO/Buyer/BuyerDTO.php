@@ -11,6 +11,6 @@ class BuyerDTO
         public string $status = 'active',
         public ?string $created_date = null
     ) {
-        $this->created_date = $created_date ?? Carbon::now()->toDateTimeString();
+        $this->created_date ??= Carbon::now()->toDateTimeString();
     }
 }
