@@ -29,3 +29,13 @@ Route::prefix('buyers')->group(function () {
     Route::put('/{id}', [BuyerController::class, 'update']);
     Route::delete('/{id}', [BuyerController::class, 'destroy']);
 });
+
+
+use App\Http\Controllers\Master\StyleController;
+
+Route::prefix('styles')->group(function () {
+    Route::get('/', [StyleController::class, 'index']);
+    Route::post('/', [StyleController::class, 'store']);
+    Route::put('/{id}', [StyleController::class, 'update']);
+    Route::delete('/{id}', [StyleController::class, 'destroy']);
+});
